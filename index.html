@@ -48,5 +48,23 @@
         <p>Join our community to stay updated and secure your smart contracts with CoShields.</p>
         <a href="https://8orcyrar2vv.typeform.com/to/jk5x4GKM" target="_blank" class="subscribe-button">Subscribe Now</a>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.how-it-works, .subscribe');
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+    
+            sections.forEach((section) => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    
 </body>
 </html>
